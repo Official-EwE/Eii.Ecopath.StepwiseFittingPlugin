@@ -8,6 +8,10 @@ Stepwise fitting procedure for the Ecopath with Ecosim food-web modeling approac
 - **License:** EUPL-1.2
 - **Icon:** `EII_plain_128x128.png`
 
+The package automatically places `EwEStepwiseFittingPlugin.dll` and its accompanying symbols and XML documentation (when copied) in `Plugins\StepwiseFittingPlugin\` beneath the consuming project's build output. SDK-style publish output uses the same layout, including publishing with `--no-build`. PackageReference consumers also inherit these rules through transitive package references.
+
+Dependencies keep their normal output locations. The host must load the plugin from this subdirectory; installing the package does not configure assembly probing. The NuGet cache layout is unchanged.
+
 ## Build
 
 Build the solution on Windows with the .NET SDK and .NET Framework 4.8 targeting pack:
